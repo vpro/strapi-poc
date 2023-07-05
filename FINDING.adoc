@@ -1,0 +1,61 @@
+
+
+[source, bash]
+----
+npx create-strapi-app@latest strapi-poc
+Need to install the following packages:
+  create-strapi-app@4.11.3
+Ok to proceed? (y) y
+? Choose your installation type Custom (manual settings)
+? Choose your preferred language TypeScript
+? Choose your default database client postgres
+? Database name: strapi-poc
+? Host: 127.0.0.1
+? Port: 5432
+? Username: strapi
+? Password: ******
+? Enable SSL connection: No
+
+Creating a project with custom database options.
+Creating a new Strapi application at /Users/michiel/github/vpro/strapi-poc/strapi-poc.
+Creating files.
+Dependencies installed successfully.
+
+Your application was created at /Users/michiel/github/vpro/strapi-poc/strapi-poc.
+
+Available commands in your project:
+
+  yarn develop
+  Start Strapi in watch mode. (Changes in Strapi project files will trigger a server restart)
+
+  yarn start
+  Start Strapi without watch mode.
+
+  yarn build
+  Build Strapi admin panel.
+
+  yarn strapi
+  Display all available commands.
+
+You can start by doing:
+
+  cd /Users/michiel/github/vpro/strapi-poc/strapi-poc
+  yarn develop
+
+
+
+----
+
+[source, psql]
+----
+michiel@mitulo:(poms)~$ psq
+psql (14.8 (Homebrew))
+Type "help" for help.
+
+postgres=# create database "strapi-poc"
+CREATE DATABASE
+postgres=# create user "strapi" password 'strapi';
+CREATE ROLE
+postgres=# grant all privileges on database "strapi-poc" to strapi;
+GRANT
+----
