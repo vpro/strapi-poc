@@ -75,6 +75,10 @@ Forget password:
 yarn run v1.22.19
 ----
 
+== Migration
+
+I performed a test migration link:./migrate-test/3voor12-updates.py[here]
+
 
 == Remarks
 
