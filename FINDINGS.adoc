@@ -76,7 +76,57 @@ yarn run v1.22.19
 
 == Remarks
 
-Ids are integers. So could not use uuid
+=== ids
+Ids are integers. So could not use uuid. So needed to store the original id in a separate field.
+
+==== workflow
+
+Any object can just be draft or published. This seems to be arranged with the implicit 'published_at' field, which is `null` for drafts.
+I don't find anything fancier than that.
+
+
+==== development
+
+yarn is pushed. If using yarn develop then the server is restarted implicitily very often.
+
+
+==== Authorization
+
+Similar to other systems (prepr, directus)
+
+There are 3 roles. Author: may create and edit their own object.Editor: may edit all objects. Admin: may do everything.
+
+You can create new roles, which can have permissions per table 'content type'.
+
+==== API's
+
+There is a straighforward REST API: https://docs.strapi.io/dev-docs/api/rest
+
+There is a graphql API: https://docs.strapi.io/dev-docs/api/graphql as a plugin.
+
+==== Plugins
+
+[source, bash]
+----
+yarn strapi install graphql
+
+----
+
+let's see what happens
+
+
+==== Custom field types
+
+https://docs.strapi.io/dev-docs/custom-fields
+
+==== Richtext
+
+Rich text is stored as markdown. So during conversion we need to convert the html to markdown.
+
+I actually think this may be preferabble over html. Though I might have preferred asciidoc, which is better defined.
+
+I don't know if it can be richer or plugged in.
+
 
 == Bugs
 
