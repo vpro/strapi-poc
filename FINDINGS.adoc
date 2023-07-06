@@ -59,3 +59,25 @@ CREATE ROLE
 postgres=# grant all privileges on database "strapi-poc" to strapi;
 GRANT
 ----
+
+==
+
+Token: 266de64888be1fc4a7b70846e83456e37244e895ce3970fba286288b05419bb7ff1d3ceb729f13237fe77507ca1de9f0547c5316b7c0dceab39344c6a7da2d2d3dbcca412dff6332f74d999d554dfd0000832957a70f4f181c34280a03c12c5bec4d8fcf21a01bfa402dc59e89c911986260fafcf244a312fa5ee72168a27c51
+
+
+Forget password:
+
+[source, bash]]
+----
+ yarn strapi admin:reset-user-password --email="michiel.meeuwissen@gmail.com" --password="Admin2000k"
+yarn run v1.22.19
+----
+
+
+== Remarks
+
+Ids are integers. So could not use uuid
+
+== Bugs
+
+- I started with a collection type '3voor12update', which just gives errors. Drievoor12update works.
