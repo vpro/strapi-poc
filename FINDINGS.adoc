@@ -1,4 +1,6 @@
-
+= VPRO STRAPI poc
+:toc:
+:toclevels: 4
 
 [source, bash]
 ----
@@ -79,18 +81,22 @@ yarn run v1.22.19
 === ids
 Ids are integers. So could not use uuid. So needed to store the original id in a separate field.
 
-==== workflow
+=== workflow
 
 Any object can just be draft or published. This seems to be arranged with the implicit 'published_at' field, which is `null` for drafts.
 I don't find anything fancier than that.
 
 
-==== development
+=== development
 
 yarn is pushed. If using yarn develop then the server is restarted implicitily very often.
 
+==== schema in code
 
-==== Authorization
+Seems nice
+
+
+=== Authorization
 
 Similar to other systems (prepr, directus)
 
@@ -98,13 +104,13 @@ There are 3 roles. Author: may create and edit their own object.Editor: may edit
 
 You can create new roles, which can have permissions per table 'content type'.
 
-==== API's
+=== API's
 
 There is a straighforward REST API: https://docs.strapi.io/dev-docs/api/rest
 
 There is a graphql API: https://docs.strapi.io/dev-docs/api/graphql as a plugin.
 
-==== Plugins
+=== Plugins
 
 [source, bash]
 ----
@@ -115,19 +121,32 @@ yarn strapi install graphql
 let's see what happens
 
 
-==== Custom field types
+=== Custom field types
 
 https://docs.strapi.io/dev-docs/custom-fields
 
-==== Richtext
+I haven't done this yet, but there are plugin which do stuff like 'country select' and 'encryptable field', which probably proofs that most things we might want are possible without support.
+
+=== Richtext
 
 Rich text is stored as markdown. So during conversion we need to convert the html to markdown.
 
 I actually think this may be preferabble over html. Though I might have preferred asciidoc, which is better defined.
 
-I don't know if it can be richer or plugged in.
+There are plugins for ckeditor
 
 
 == Bugs
 
 - I started with a collection type '3voor12update', which just gives errors. Drievoor12update works.
+- http://localhost:1337/admin/list-plugins is something giving empty responses
+
+== Conclusions?
+
+- STRAPI too seems to be a straight forward headless cms.
+- Backend by a relational database
+- Can be self-hosted easily
+- Develop in development mode, which may change local files, which can be simply committed then.
+- ids are ids.
+- I don't know whether the api can be deployed seperately from the admin interface. Probably.
+- There are plugins availble for all kind of things.

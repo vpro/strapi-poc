@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "drievoor12updates",
+  "info": {
+    "singularName": "drievoor12update",
+    "pluralName": "drievoor12updates",
+    "displayName": "Drievoor12update",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "uuid": {
+      "type": "uid"
+    },
+    "publishDate": {
+      "type": "datetime"
+    }
+  }
+}
