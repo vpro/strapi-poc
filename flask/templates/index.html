@@ -1,0 +1,15 @@
+<html lang="en">
+  <head>
+
+    <title>3voor12</title>
+  </head>
+  <body>
+    <h1>3voor12 updates</h1>
+    <ul id="updates">
+      {% for update in updates %}
+      <li><a href="{{update.attributes.uuid}}/{{update.attributes.title | path}}">{{update.attributes.title}}</a></li>
+      {% endfor %}
+    </ul>
+
+  </body>
+</html>

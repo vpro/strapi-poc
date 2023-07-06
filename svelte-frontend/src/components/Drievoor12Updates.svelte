@@ -36,7 +36,9 @@
             }
           }
         }
-      `
+      `,
+      {"Authorization": "Bearer 529aa5620e514391b3acccff6a095a277961c8f41a3ca128bd3c27fd870f80adfaefd13089bb60c614976147753291c11ec2cc58db249cf491e102ca5fc7e8cbc785cc0597ea80a257d9fbac8233bde7da44ea04c18e2da5d530e839f3dba4c7b4c9975416a0ae2078f4d4e822734a3ea54114d246d7842962bb10499df05df7"
+      }
     )
     return data
   })

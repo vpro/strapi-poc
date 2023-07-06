@@ -56,7 +56,6 @@ def map_to_strapi(source):
 	'text': markdownify.markdownify(source['text']),
 	'publishDate': datetime.fromtimestamp(source['publishDate'] / 1000).isoformat(),
 	'type': source['type'],
-
 	 }
 
 

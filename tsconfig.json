@@ -19,7 +19,9 @@
     "src/admin/",
     "**/*.test.*",
     "src/plugins/**",
-    "svelte-frontend/*",
-    "FINDINGS.adoc"
+    "svelte-frontend/",
+    "flask/",
+    "FINDINGS.adoc",
+    "migrate-test/*"
   ]
 }

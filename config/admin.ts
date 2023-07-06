@@ -10,4 +10,10 @@ export default ({ env }) => ({
       salt: env('TRANSFER_TOKEN_SALT'),
     },
   },
+  watchIgnoreFiles: [
+    '**/flask/**',
+    '**/migrate-test/**',
+    "**/svelte-frontend/**",
+    "**/*.adoc"
+  ]
 });

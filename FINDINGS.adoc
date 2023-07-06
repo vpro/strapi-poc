@@ -151,10 +151,20 @@ I actually think this may be preferabble over html. Though I might have preferre
 There are plugins for ckeditor
 
 
+=== Frontend demo's
+
+==== svelte
+I tried link:svelte-frontend[svelte], but didn't quite get thins working.
+
+==== flask
+Falled by to link:flask[flask]. That went beter. The index page was working. Doing more complicated graphql e.g. with filtering on uuid, was not working, and doesn't seem so easy to figure out.
+
+
 == Bugs
 
 - I started with a collection type '3voor12update', which just gives errors. Drievoor12update works.
 - http://localhost:1337/admin/list-plugins is something giving empty responses
+- Default it is watching all kind of silly stuff, like .adocs...
 
 == Conclusions?
 
