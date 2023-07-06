@@ -108,6 +108,17 @@ There are 3 roles. Author: may create and edit their own object.Editor: may edit
 
 You can create new roles, which can have permissions per table 'content type'.
 
+
+=== Authentication
+
+Defaults to users in database.
+
+I suppose it can be replaced by sso, but didn't try that yet.
+
+https://gitlab.com/hipsquare/strapi-plugin-keycloak (Not found in marketplace?)
+
+https://strapi.io/blog/how-to-add-a-custom-o-auth2-open-id-connect-provider-to-strapi-v4
+
 === API's
 
 There is a straighforward REST API: https://docs.strapi.io/dev-docs/api/rest
@@ -151,6 +162,8 @@ There are plugins for ckeditor
 - Backend by a relational database
 - Can be self-hosted easily
 - Develop in development mode, which may change local files, which can be simply committed then.
-- ids are ids.
-- I don't know whether the api can be deployed seperately from the admin interface. Probably.
-- There are plugins availble for all kind of things.
+- ids are integers.
+- I don't know whether the api can be deployed separately from the admin interface. Probably.
+- There are plugins available for all kind of things.
+- workflow is limited.
+- there is a discord community
